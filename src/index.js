@@ -83,9 +83,9 @@ const Alpine = {
         if (! newEl.__x) {
             newEl.__x = new Component(newEl, component.getUnobservedData())
         }
-    }
+    },
     
-    booleanAttributes: booleanAttributes;
+    config: {booleanAttributes: booleanAttributes};
 }
 
 if (! isTesting()) {
