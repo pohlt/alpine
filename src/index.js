@@ -1,5 +1,5 @@
 import Component from './component'
-import { domReady, isTesting } from './utils'
+import { domReady, isTesting, booleanAttributes } from './utils'
 
 const Alpine = {
     start: async function () {
@@ -83,7 +83,9 @@ const Alpine = {
         if (! newEl.__x) {
             newEl.__x = new Component(newEl, component.getUnobservedData())
         }
-    }
+    },
+    
+    config: {booleanAttributes: booleanAttributes};
 }
 
 if (! isTesting()) {
